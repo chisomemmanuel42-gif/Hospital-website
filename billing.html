@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Billing & Payments | Medivanta</title>
+
+  <!-- BOOTSRTAPP CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+  <!-- FONT AWESOME -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css"
+    integrity="sha384-NvKbDTEnL+A8F/AA5Tc5kmMLSJHUO868P+lDtTpJIeQdGYaUIuLr4lVGOEA1OcMy" crossorigin="anonymous">
+
+  <!-- CSS STYLE -->
+  <link rel="stylesheet" href="css/style.css">
+
+
+  <!-- REBRANDING JS -->
+  <script src="branding-update.js"></script>
+
+  <style>
+    .card {
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+    footer {
+      background-color: #1c66aa;
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+    }
+    .invoice-card {
+  background: #f9fcff;
+  border: 1px solid #d4eaf7;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+.invoice-card h4 {
+  margin-bottom: 10px;
+  color: #1c66aa;
+}
+.invoice-card p {
+  margin: 5px 0;
+}
+
+  </style>
+</head>
+<body>
+
+    <!-- Medivanta Loader -->
+<div id="medivantaLoader">
+  <div class="loaderContent">
+    <img src="images/caduceus-medical-symbol-blue-background-9299141.webp" alt="Medivanta Logo" width="80">
+  </div>
+</div>
+
+
+  <!-- 2ND NAV BAR -->
+  <header>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light custom-navbar">
+      <div class="container">
+        <div class="d-flex align-items-center">
+          <img src="images/caduceus-medical-symbol-blue-background-9299141.webp" alt="MediPlus Logo" width="60"
+            height="60" class="me-2 rounded-circle">
+          <strong><span style="color: #1c66aa;">Medi</span>Vanta</strong>
+        </div>
+
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+          aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars" id="menu-icon"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link active" href="portfolio.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="doctors .html">Doctors</a></li>
+            <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Pages</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="ourcase.html">Our Cases</a></li>
+                <li><a class="dropdown-item" href="testimonial.html">Testimonials</a></li>
+                  <li><a class="dropdown-item" href="careers.html">Careers</a></li>
+                    <li><a class="dropdown-item" href="patient-dashboard.html">patient-dashboard</a></li>
+
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Blogs</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="medicalnews.html">Medical News</a></li>
+                <li><a class="dropdown-item" href="healthtips.html">Health Tips</a></li>
+                <li><a class="dropdown-item" href="mentalhealth.html">Mental Health Talks</a></li>
+                <li><a class="dropdown-item" href="research.html">Research Highlights</a></li>
+                <li><a class="dropdown-item" href="preventivecare.html">Preventive Care</a></li>
+                <li><a class="dropdown-item" href="askadoctor.html">Ask Our Doctors</a></li>
+
+              </ul>
+            </li>
+
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+          </ul>
+
+          <a href="appiontments.html" class="btn appointment-btn ms-3">Book Appointment</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Banner -->
+  <div class="banner">
+    <h1><i class="fas fa-credit-card"></i> Billing & Payments</h1>
+    <p class="lead">Keep track of your invoices and settle bills securely</p>
+  </div>
+
+  <!-- Summary Cards -->
+  <div class="container py-4">
+    <div class="row text-center g-4">
+      <div class="col-md-6">
+        <div class="card p-4">
+          <h5><i class="fas fa-file-invoice-dollar"></i> Unpaid Bills</h5>
+          <p>You have <strong>₦35,000</strong> pending from recent treatments.</p>
+          <a href="#" class="btn btn-outline-danger btn-sm">Pay Now</a>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card p-4">
+          <h5><i class="fas fa-wallet"></i> Total Paid</h5>
+          <p><strong>₦120,000</strong> in cleared bills since your last visit.</p>
+          <a href="#" class="btn btn-outline-success btn-sm">View History</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Billing Table -->
+  <div class="container py-4">
+    <h4 class="mb-3 text-center">📋 Invoice History</h4>
+    <div class="table-responsive">
+      <table class="table table-bordered">
+        <thead class="table-light">
+          <tr>
+            <th>Date</th>
+            <th>Service</th>
+            <th>Amount</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>2025-06-20</td>
+            <td>Cardiology Consultation</td>
+            <td>₦25,000</td>
+            <td><span class="text-danger">Unpaid</span></td>
+            <td><a href="#" class="btn btn-sm btn-danger">Pay</a></td>
+          </tr>
+          <tr>
+            <td>2025-05-15</td>
+            <td>Pediatric Checkup</td>
+            <td>₦15,000</td>
+            <td><span class="text-success">Paid</span></td>
+            <td><a href="#" class="btn btn-sm btn-success"disabled>Paid</a></td>
+          </tr>
+          <tr>
+            <td>2025-04-08</td>
+            <td>Laboratory Tests</td>
+            <td>₦80,000</td>
+            <td><span class="text-success">Paid</span></td>
+            <td><a href="#" class="btn btn-sm btn-success"disabled>Paid</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+<div class="container my-5">
+
+  <!-- Multilingual Header -->
+  <h2 id="invoiceHeader" class="mb-4 text-center">Your Medical Invoices</h2>
+
+  <!-- Summary Totals -->
+  <div class="d-flex justify-content-center gap-5 mb-4">
+    <div><strong>Total Paid:</strong> ₦232,000</div>
+    <div><strong>Total Pending:</strong> ₦205,000</div>
+  </div>
+
+  <!-- Search Input -->
+  <div class="mb-4 d-flex justify-content-center">
+    <input type="text" id="invoiceSearch" class="form-control w-50" placeholder="Search service or date...">
+  </div>
+
+  <!-- Tabs Navigation -->
+  <ul class="nav nav-tabs  mb-3">
+    <li class="nav-item"><a class="nav-link active" data-bs-toggle="tab" href="#paidTab">Paid</a></li>
+    <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#pendingTab">Pending</a></li>
+  </ul>
+
+  <!-- Tab Content -->
+  <div class="tab-content">
+
+    <!-- Paid Invoices -->
+    <div class="tab-pane fade show active" id="paidTab">
+      <div class="d-flex flex-column">
+
+        <div class="invoice-card">
+          <h4>Teeth Whitening</h4>
+          <p>Date: 15 July 2025</p>
+          <p>Status: <span class="badge bg-success">Paid ✅</span></p>
+          <p>Total: ₦75,000</p>
+          <button class="btn btn-outline-primary download-btn">Download PDF</button>
+          <button class="btn btn-outline-secondary" onclick="window.print()">Print</button>
+        </div>
+
+        <div class="invoice-card">
+          <h4>Dental Cleaning & X-Ray</h4>
+          <p>Date: 01 August 2025</p>
+          <p>Status: <span class="badge bg-success">Paid ✅</span></p>
+          <p>Total: ₦40,000</p>
+          <button class="btn btn-outline-primary download-btn">Download PDF</button>
+          <button class="btn btn-outline-secondary" onclick="window.print()">Print</button>
+        </div>
+
+        <div class="invoice-card">
+          <h4>Eye Test & Prescription Glasses</h4>
+          <p>Date: 06 August 2025</p>
+          <p>Status: <span class="badge bg-success">Paid ✅</span></p>
+          <p>Total: ₦32,000</p>
+          <button class="btn btn-outline-primary download-btn">Download PDF</button>
+          <button class="btn btn-outline-secondary" onclick="window.print()">Print</button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Pending Invoices -->
+    <div class="tab-pane fade" id="pendingTab">
+      <div class="d-flex flex-column">
+
+        <div class="invoice-card">
+          <h4>Heart Surgery Consultation</h4>
+          <p>Date: 22 July 2025</p>
+          <p>Status: <span class="badge bg-warning text-dark">Pending 🕒</span></p>
+          <p>Total: ₦150,000</p>
+          <button class="btn btn-outline-primary download-btn">Download PDF</button>
+          <button class="btn btn-outline-secondary" onclick="window.print()">Print</button>
+        </div>
+
+        <div class="invoice-card">
+          <h4>Emergency Ambulance Transport</h4>
+          <p>Date: 03 August 2025</p>
+          <p>Status: <span class="badge bg-warning text-dark">Pending 🕒</span></p>
+          <p>Total: ₦55,000</p>
+          <button class="btn btn-outline-primary download-btn">Download PDF</button>
+          <button class="btn btn-outline-secondary" onclick="window.print()">Print</button>
+        </div>
+
+        <div class="invoice-card">
+          <h4>Physical Therapy Session</h4>
+          <p>Date: 08 August 2025</p>
+          <p>Status: <span class="badge bg-warning text-dark">Pending 🕒</span></p>
+          <p>Total: ₦60,000</p>
+          <button class="btn btn-outline-primary download-btn">Download PDF</button>
+          <button class="btn btn-outline-secondary" onclick="window.print()">Print</button>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+  <!-- Back to Dashboard Button -->
+  <div class="text-center mb-4">
+    <a href="patient-dashboard.html" class="btn btn-secondary">
+      <i class="fas fa-arrow-left"></i> Back to Dashboard
+    </a>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2045 <strong>Medivanta</strong> | Easy Payments. Trusted Care.</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script>
+  document.querySelectorAll('.download-btn').forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const { jsPDF } = window.jspdf;
+      const card = btn.closest(".invoice-card");
+      const doc = new jsPDF();
+      doc.text("Medivanta Invoice", 20, 20);
+      doc.text("Service: " + card.querySelector("h4").textContent, 20, 30);
+      card.querySelectorAll("p").forEach((p, i) => {
+        doc.text(p.textContent, 20, 40 + (i * 10));
+      });
+      doc.save("invoice.pdf");
+    });
+  });
+</script>
+<script>
+  const searchInput = document.getElementById("invoiceSearch");
+
+  searchInput.addEventListener("keyup", () => {
+    const searchTerm = searchInput.value.toLowerCase();
+    const invoices = document.querySelectorAll(".invoice-card");
+
+    invoices.forEach(card => {
+      const text = card.textContent.toLowerCase();
+      if (text.includes(searchTerm)) {
+        card.style.display = "block";
+      } else {
+        card.style.display = "none";
+      }
+    });
+  });
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mental Health Talks | Medi Plus</title>
+    <!-- BOOTSTRAPP CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- FONT AWSEOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css"
+        integrity="sha384-NvKbDTEnL+A8F/AA5Tc5kmMLSJHUO868P+lDtTpJIeQdGYaUIuLr4lVGOEA1OcMy" crossorigin="anonymous">
+
+    <!-- CSS STYLING -->
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <!-- REBRANDING JS -->
+    <script src="branding-update.js"></script>
+
+    <style>
+        body {
+            background-color: #f8f9fc;
+        }
+
+        .mh-banner {
+            background-color: #1c66aa;
+            color: white;
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+
+        .video-card,
+        .quote-card,
+        .playlist-card,
+        .advice-card,
+        .comment-card {
+            background-color: white;
+            border-left: 4px solid #1c66aa;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: 0.3s ease;
+        }
+
+        .video-card:hover,
+        .quote-card:hover,
+        .playlist-card:hover,
+        .advice-card:hover,
+        .comment-card:hover {
+            transform: scale(1.01);
+            box-shadow: 0 0 14px rgba(0, 0, 0, 0.1);
+        }
+
+        iframe {
+            border-radius: 8px;
+            width: 100%;
+            height: 300px;
+        }
+
+        .mh-cta {
+            background-color: #eef7ff;
+            padding: 2rem;
+            border-radius: 8px;
+        }
+
+        .btn-outline-secondary:hover {
+            background-color: #1c66aa;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Medivanta Loader -->
+<div id="medivantaLoader">
+  <div class="loaderContent">
+    <img src="images/caduceus-medical-symbol-blue-background-9299141.webp" alt="Medivanta Logo" width="80">
+  </div>
+</div>
+
+
+    <!-- 2ND NAV BAR -->
+    <header>
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light custom-navbar">
+            <div class="container">
+                <div class="d-flex align-items-center">
+                    <img src="images/caduceus-medical-symbol-blue-background-9299141.webp" alt="MediPlus Logo"
+                        width="60" height="60" class="me-2 rounded-circle">
+                    <strong><span style="color: #1c66aa;">Medi</span>Vanta</strong>
+                </div>
+
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                    aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                     <i class="fa-solid fa-bars" id="menu-icon"></i> 
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link active" href="portfolio.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="doctors .html">Doctors</a></li>
+                        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button"
+                                data-bs-toggle="dropdown">Pages</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="ourcase.html">Our Cases</a></li>
+                                <li><a class="dropdown-item" href="testimonial.html">Testimonials</a></li>
+                                  <li><a class="dropdown-item" href="careers.html">Careers</a></li>
+                                    <li><a class="dropdown-item" href="patient-dashboard.html">patient-dashboard</a></li>
+
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button"
+                                data-bs-toggle="dropdown">Blogs</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="medicalnews.html">Medical News</a></li>
+                                <li><a class="dropdown-item" href="healthtips.html">Health Tips</a></li>
+                                <li><a class="dropdown-item" href="mentalhealth.html">Mental Health Talks</a></li>
+                                <li><a class="dropdown-item" href="research.html">Research Highlights</a></li>
+                                <li><a class="dropdown-item" href="preventivecare.html">Preventive Care</a></li>
+                                <li><a class="dropdown-item" href="askadoctor.html">Ask Our Doctors</a></li>
+
+                            </ul>
+                        </li>
+
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                    </ul>
+
+                    <a href="appiontments.html" class="btn appointment-btn ms-3">Book Appointment</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- Header -->
+    <div class="mh-banner">
+        <h1>Mental Health Talks</h1>
+        <p class="lead">Empowering your mind with expert insights, motivation, and real-life strategies for wellness.
+        </p>
+    </div>
+
+    <!-- Motivational Videos -->
+    <div class="container py-5">
+        <h4 class="mb-4 text-center">🎥 Featured Talks</h4>
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="col">
+                <div class="video-card">
+                    <h6>“Box Breathing Technique” – Reduce Anxiety</h6>
+                    <iframe src="https://www.youtube.com/embed/4pLUleLdwY4" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="col">
+                <div class="video-card">
+                    <h6>“Unlock Your Inner Power” – Lisa Nichols</h6>
+                    <iframe src="https://www.youtube.com/embed/BvYpHIWg5Mw" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="col">
+                <div class="video-card">
+                    <h6>“Guided Meditation for Inner Peace” – Calm</h6>
+                    <iframe src="https://www.youtube.com/embed/MIr3RsUWrdo" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="col">
+                <div class="video-card">
+                    <h6>“Mental Strength & Growth” – Mel Robbins</h6>
+                    <iframe src="https://www.youtube.com/embed/TqsuGABvGZ4" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Playlist Themes -->
+    <div class="container mb-5">
+        <h4 class="mb-4 text-center">🎧 Explore Video Playlists</h4>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+                <div class="playlist-card text-center">
+                    <h6>Anxiety & Stress Relief</h6>
+                    <p>Calming exercises, breathwork, and patient stories</p>
+                    <a href="https://www.youtube.com/results?search_query=anxiety+relief+playlist"
+                        class="btn btn-outline-secondary btn-sm" target="_blank">Open Playlist</a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="playlist-card text-center">
+                    <h6>Motivation & Self-Worth</h6>
+                    <p>Talks that uplift, encourage, and reframe negativity</p>
+                    <a href="https://www.youtube.com/results?search_query=motivation+mental+health"
+                        class="btn btn-outline-secondary btn-sm" target="_blank">Open Playlist</a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="playlist-card text-center">
+                    <h6>Sleep & Focus Recovery</h6>
+                    <p>Guided sleep audios and mindfulness practices</p>
+                    <a href="https://www.youtube.com/results?search_query=sleep+meditation+focus"
+                        class="btn btn-outline-secondary btn-sm" target="_blank">Open Playlist</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Advice Cards -->
+    <div class="container mb-5">
+        <h4 class="mb-4 text-center">🧑‍⚕️ From Our Mental Health Doctors</h4>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+                <div class="advice-card">
+                    <h6>Ground Yourself Daily</h6>
+                    <p>Use physical sensations — touch, breath, sound — to reduce panic during anxiety episodes.</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="advice-card">
+                    <h6>Journal Your Thoughts</h6>
+                    <p>Writing helps externalize worry and provides clarity. Just 5 minutes daily can help.</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="advice-card">
+                    <h6>Limit Mental Overload</h6>
+                    <p>Set social media boundaries, avoid multitasking, and create digital-free zones at home.</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="advice-card">
+                    <h6>✨ Ground Yourself</h6>
+                    <p>Use touch, sound, and breath to anchor yourself during panic. Hold an object and breathe slowly.
+                    </p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="advice-card">
+                    <h6>📝 Journal Often</h6>
+                    <p>Writing down thoughts helps organize emotions and release mental pressure. 5 minutes daily is
+                        powerful.</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="advice-card">
+                    <h6>📵 Set Boundaries</h6>
+                    <p>Control your digital exposure. Limit scrolling, mute distractions, and prioritize real-world
+                        peace.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Comment Thread -->
+    <div class="container mb-5">
+        <h4 class="mb-4 text-center">💬 Share Your Thoughts</h4>
+        <div class="comment-card">
+            <form>
+                <textarea class="form-control mb-3" rows="3"
+                    placeholder="What did today’s talk or playlist mean to you?"></textarea>
+                <button type="submit" class="btn btn-outline-primary btn-sm">Post Comment</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="container mb-5">
+        <div class="mh-cta text-center">
+            <h5>🤝 Need Personalized Help?</h5>
+            <p>Book a private session with a Medi Plus therapist or join our weekly live talk circles.</p>
+            <a href="appiontments.html" class="btn btn-primary me-2">📅 Book Now</a>
+            <a href="medicalnews.html" class="btn btn-outline-secondary">← Back to News</a>
+        </div>
+    </div>
+
+
+    <!-- Footer or Next Steps (Optional) -->
+    <footer class="footer text-light py-5">
+        <div class="container">
+            <div class="row">
+
+                <!-- About Medi Plus -->
+                <div class="col-md-3 mb-4">
+                    <h5>Medi Plus</h5>
+                    <p>We offer trusted medical solutions for you and your loved ones. Excellence in care, compassion in
+                        action.
+                    </p>
+                    <div class="d-flex gap-3 social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-md-3">
+                    <h5 class="text-light mb-3">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="services.html" class="text-decoration-none">Our Services</a></li><br>
+                        <li><a href="doctors .html" class="text-decoration-none">Doctors</a></li><br>
+                        <li><a href="FAQ.html" class="text-decoration-none">FAQ</a></li><br>
+                        <li><a href="emergency.html" class="text-decoration-none">Emergency Help</a></li><br>
+                        <li><a href="appiontments.html" class="text-decoration-none">Appointments</a></li>
+                    </ul>
+                </div>
+
+                <!-- Opening Hours -->
+                <div class="col-md-3 mb-4">
+                    <div class="container my-4">
+                        <h5>Opening Hours</h5>
+                        <div id="hourTicker" class="fs-6 text-light"></div>
+                    </div>
+                </div>
+
+                <!-- Newsletter Signup -->
+                <div class="col-md-3 mb-4">
+                    <h5>Stay Updated</h5>
+                    <p>Get the latest health tips, offers, and medical news right to your inbox.</p>
+                    <form action="#" class="newsletter-form">
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <button type="submit"><i class="fa-regular fa-paper-plane" style="color: white;"></i></button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+    </footer>
+
+    <!-- Copyright -->
+
+    <div class="text-center text-light pt-3 pb-2" style="background-color:#2f4c66;">
+        <p class="mb-0">© 2045 Medi Plus | All Rights Reserved</p>
+    </div>
+
+
+    <!-- MAIN JS -->
+    <script src="script.js" defer></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
