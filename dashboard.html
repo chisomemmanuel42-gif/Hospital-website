@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Patient Dashboard | Medi Plus</title>
+    <!-- BOOTSTRAPP CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- FONT AWSEOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css"
+        integrity="sha384-NvKbDTEnL+A8F/AA5Tc5kmMLSJHUO868P+lDtTpJIeQdGYaUIuLr4lVGOEA1OcMy" crossorigin="anonymous">
+
+    <!-- CSS STYLING -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--  JS CHART  -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+    <!-- REBRANDING JS -->
+    <script src="branding-update.js"></script>
+
+    
+  <!-- TYPED JS -->
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <style>
+        .dashboard-header {
+            background-color: #1c66aa;
+            color: white;
+            padding: 2.5rem 1rem;
+            text-align: center;
+        }
+
+        .dashboard-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
+            transition: 0.3s ease;
+        }
+
+        .dashboard-card:hover {
+            transform: scale(1.01);
+            box-shadow: 0 0 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-outline-primary:hover {
+            background-color: #1c66aa;
+            color: white;
+        }
+
+        canvas {
+            max-width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Medivanta Loader -->
+<div id="medivantaLoader">
+  <div class="loaderContent">
+    <img src="images/caduceus-medical-symbol-blue-background-9299141.webp" alt="Medivanta Logo" width="80">
+  </div>
+</div>
+
+
+
+    <!-- 2ND NAV BAR -->
+    <header>
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light custom-navbar">
+            <div class="container">
+                <div class="d-flex align-items-center">
+                    <img src="images/caduceus-medical-symbol-blue-background-9299141.webp" alt="MediPlus Logo"
+                        width="60" height="60" class="me-2 rounded-circle">
+                    <strong><span style="color: #1c66aa;">Medi</span>Vanta</strong>
+                </div>
+
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                    aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                     <i class="fa-solid fa-bars" id="menu-icon"></i>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link active" href="portfolio.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="doctors .html">Doctors</a></li>
+                        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button"
+                                data-bs-toggle="dropdown">Pages</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="ourcase.html">Our Cases</a></li>
+                                <li><a class="dropdown-item" href="testimonial.html">Testimonials</a></li>
+                                  <li><a class="dropdown-item" href="careers.html">Careers</a></li>
+                                    <li><a class="dropdown-item" href="patient-dashboard.html">patient-dashboard</a></li>
+
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button"
+                                data-bs-toggle="dropdown">Blogs</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="medicalnews.html">Medical News</a></li>
+                                <li><a class="dropdown-item" href="healthtips.html">Health Tips</a></li>
+                                <li><a class="dropdown-item" href="mentalhealth.html">Mental Health Talks</a></li>
+                                <li><a class="dropdown-item" href="research.html">Research Highlights</a></li>
+                                <li><a class="dropdown-item" href="preventivecare.html">Preventive Care</a></li>
+                                <li><a class="dropdown-item" href="askadoctor.html">Ask Our Doctors</a></li>
+
+                            </ul>
+                        </li>
+
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                    </ul>
+
+                    <a href="appiontments.html" class="btn appointment-btn ms-3">Book Appointment</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Dashboard Header -->
+    <div class="dashboard-header">
+        <h2>Welcome, Chisom</h2>
+        <h3>Good Day ☀️</h3>
+        <p class="lead">Explore your health status, appointments, checkups, and stay in touch with doctors.</p>
+    </div>
+
+    <!-- Main Dashboard -->
+    <div class="container py-5">
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+
+            <!-- Appointment -->
+            <div class="col">
+                <div class="dashboard-card">
+                    <h5>📅 Upcoming Appointment</h5>
+                    <p><strong>Date:</strong> July 25, 2045</p>
+                    <p><strong>Doctor:</strong> Dr. Anuli Eze</p>
+                    <p><strong>Location:</strong> Wellness Room 3</p>
+                </div>
+            </div>
+
+            <!-- Checkup Summary -->
+            <div class="col">
+                <div class="dashboard-card">
+                    <h5>✅ Last Checkup Summary</h5>
+                    <p><strong>Date:</strong> Jan 10, 2045</p>
+                    <p><strong>Vitals:</strong> Stable</p>
+                    <p><strong>Blood Work:</strong> No abnormalities</p>
+                </div>
+            </div>
+
+            <!-- Health Chart -->
+            <div class="col">
+                <div class="dashboard-card">
+                    <h5>📊 Health Progress (Blood Pressure)</h5>
+                    <canvas id="bpChart" height="180"></canvas>
+                </div>
+            </div>
+
+            <!-- Upload Portal -->
+            <div class="col">
+                <div class="dashboard-card">
+                    <h5>📤 Upload Your Reports</h5>
+                    <form>
+                        <input type="file" class="form-control mb-2" />
+                        <button type="submit" class="btn btn-outline-primary btn-sm">Submit File</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Checklist -->
+            <div class="col">
+                <div class="dashboard-card">
+                    <h5>📥 Health Checklist</h5>
+                    <p>Download your preventive care checklist based on current age and profile.</p>
+                    <a href="#" class="btn btn-outline-primary btn-sm">Download PDF</a>
+                </div>
+            </div>
+
+            <!-- Inbox -->
+            <div class="col">
+                <div class="dashboard-card" id="inboxCard">
+                    <h5>📩 Inbox</h5>
+                    <div id="inboxMessageArea"></div>
+                    <textarea class="form-control mb-2" rows="2" placeholder="Reply to your doctor..."></textarea>
+                    <button type="submit" class="btn btn-outline-secondary btn-sm">Send Message</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    
+  <!-- Dashboard Cards -->
+  <div class="container dashboard-section">
+    <div class="row row-cols-1 row-cols-md-2 g-4 text-center">
+
+      <div class="col">
+        <div class="card p-4">
+          <h5><i class="fas fa-notes-medical"></i> Medical Records</h5>
+          <p>View lab results, prescriptions, and diagnostic history.</p>
+          <a href="records.html" class="btn btn-outline-primary">Go to Records</a>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card p-4">
+          <h5><i class="fas fa-credit-card"></i> Billing & Payments</h5>
+          <p>Track your invoices and pay bills online.</p>
+          <a href="billing.html" class="btn btn-outline-primary">View Billing</a>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card p-4">
+          <h5><i class="fas fa-comments"></i> Messages</h5>
+          <p>Chat securely with doctors and support staff.</p>
+          <a href="messages.html" class="btn btn-outline-primary">Open Inbox</a>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card p-4">
+          <h5><i class="fas fa-user-cog"></i> Profile Settings</h5>
+          <p>Edit personal details, password, and preferences.</p>
+          <a href="profile.html" class="btn btn-outline-primary">Manage Profile</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+<div class="text-center my-4">
+  <a href="#" class="btn btn-outline-danger" id="logoutBtn">
+    <i class="fas fa-sign-out-alt"></i> Logout
+  </a>
+</div>
+
+
+    <!-- Footer or Next Steps (Optional) -->
+    <footer class="footer text-light py-5">
+        <div class="container">
+            <div class="row">
+
+                <!-- About Medi Plus -->
+                <div class="col-md-3 mb-4">
+                    <h5>Medi Plus</h5>
+                    <p>We offer trusted medical solutions for you and your loved ones. Excellence in care, compassion in
+                        action.
+                    </p>
+                    <div class="d-flex gap-3 social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-md-3">
+                    <h5 class="text-light mb-3">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="services.html" class="text-decoration-none">Our Services</a></li><br>
+                        <li><a href="doctors .html" class="text-decoration-none">Doctors</a></li><br>
+                        <li><a href="FAQ.html" class="text-decoration-none">FAQ</a></li><br>
+                        <li><a href="emergency.html" class="text-decoration-none">Emergency Help</a></li><br>
+                        <li><a href="appiontments.html" class="text-decoration-none">Appointments</a></li>
+                    </ul>
+                </div>
+
+                <!-- Opening Hours -->
+                <div class="col-md-3 mb-4">
+                    <div class="container my-4">
+                        <h5>Opening Hours</h5>
+                        <div id="hourTicker" class="fs-6 text-light"></div>
+                    </div>
+                </div>
+
+                <!-- Newsletter Signup -->
+                <div class="col-md-3 mb-4">
+                    <h5>Stay Updated</h5>
+                    <p>Get the latest health tips, offers, and medical news right to your inbox.</p>
+                    <form action="#" class="newsletter-form">
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <button type="submit"><i class="fa-regular fa-paper-plane" style="color: white;"></i></button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+    </footer>
+
+    <!-- Copyright -->
+
+    <div class="text-center text-light pt-3 pb-2" style="background-color:#2f4c66;">
+        <p class="mb-0">© 2045 Medi Plus | All Rights Reserved</p>
+    </div>
+
+
+    <!-- MAIN JS -->
+    <script src="script.js" defer></script>
+
+
+    <!-- Chart JS -->
+    <script>
+        const ctx = document.getElementById('bpChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+                datasets: [{
+                    label: 'Systolic BP',
+                    data: [130, 128, 126, 125, 127, 124],
+                    borderColor: '#1c66aa',
+                    fill: false,
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: false,
+                        suggestedMin: 110,
+                        suggestedMax: 140
+                    }
+                }
+            }
+        });
+    </script>
+
+    <script>
+        // Simulate inbox content
+        const inboxMessage = ""; // Change to message string to test
+
+        const inboxArea = document.getElementById("inboxMessageArea");
+        if (inboxMessage.trim() === "") {
+            inboxArea.innerHTML = "<p class='text-muted'>🚫 No new messages available at this time.</p>";
+        } else {
+            inboxArea.innerHTML = `<p><em>${inboxMessage}</em><br />– Dr. Ada</p>`;
+        }
+    </script>
+
+    <script>
+// Auto logout after 10 minutes (600,000 milliseconds)
+let logoutTimer;
+
+function resetTimer() {
+  clearTimeout(logoutTimer);
+  logoutTimer = setTimeout(() => {
+    alert("⏳ Session expired due to inactivity.");
+    window.location.href = "login.html"; // Redirect to login
+  }, 600000); // 10 minutes
+}
+
+// Reset timer on activity
+window.onload = resetTimer;
+document.onmousemove = resetTimer;
+document.onkeydown = resetTimer;
+document.onclick = resetTimer;
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const logoutBtn = document.getElementById("logoutBtn");
+
+    if (logoutBtn) {
+      logoutBtn.addEventListener("click", function () {
+        // Optional: show confirmation
+        const confirmLogout = confirm("Are you sure you want to logout?");
+        if (confirmLogout) {
+          window.location.href = "patient-dashboard.html";
+        }
+      });
+    }
+  });
+</script>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
